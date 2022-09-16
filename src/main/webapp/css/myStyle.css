@@ -1,0 +1,351 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.alertMessage {
+	color: red;
+}
+
+.header {
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: green;
+	margin-bottom: 15px;
+}
+
+.navbar a{
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	margin-bottom: 0;
+}
+
+.navbar a:hover {
+ 	background-color: #45a049;
+ 	color: white;
+}
+
+.content {
+	width: 100%;
+}
+
+.directoryTree {
+	width: 45%;
+	float: left;
+}
+
+.documentsPart {
+	width: 55%;
+	float: right;
+}
+
+#languages {
+	float: right;
+}
+
+#languages a{
+	padding: 12px 30px;
+}
+
+.indexForms {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.loginContainer, .registrationContainer {
+	display: table;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	margin-left: -300px;
+}
+
+.loginContainer {
+	height: 400px;
+	margin-top: -200px;
+}  
+
+.registrationContainer {
+	height: 500px;
+	margin-top: -250px;
+}
+
+.loginSection, .registrationSection {
+	width: 35%;
+	padding: 10px;
+	border: 3px solid green;
+	border-radius: 20px;
+	background-color: #eee;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.loginBottomSection, .registrationBottomSection {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#loginButton, #registrationButton {
+	float: left;
+}
+
+.changeAutMethod {
+	margin-top: 5px;
+	float: right;
+}
+
+#registerAnchor, #loginAnchor {
+	text-decoration: none;
+}
+
+#registerAnchor:hover, #loginAnchor:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.sectionHeading {
+	text-align: center;
+	border-bottom: 2px solid green; 
+}
+
+input[type="text"].inputWithError, input[type="password"].inputWithError, input[type="email"].inputWithError {
+	border: 2px solid red;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+	border-radius: 5px;
+	border: 2px solid green;
+	padding: 10px 15px;
+	margin: 10px 0;
+	width: 100%;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: white;
+	font-size: 15px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border: 2px solid #45a049;
+}
+
+textarea {
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+ 	border: 2px solid green;
+	border-radius: 5px;
+	background-color: white;
+	resize: none;
+}
+
+input[type=button] {
+	background-color: green;
+	color: white;
+	padding: 10px 20px;
+ 	margin: 10px 0;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+input[type=button].creation {
+	width: 20%;
+}
+
+input[type=button]:hover {
+	background-color: #45a049;
+}
+
+.directoryUl {
+	margin: 0;
+	list-style-type: none;
+}
+
+.directoryLi, .selectedRecycleBin {
+	padding: 10px 0 10px 40px;
+  	background-image: url('folder.png');
+  	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 25px;
+}
+
+.selectedRecycleBin {
+	color: red;
+}
+
+#recycleBin {
+	background-image: url('recycleBin.png');
+}
+
+.subdirectoryUl {
+	margin: 0;
+	list-style-type: none;
+	padding: 10px 0 10px 100px;
+}
+
+.subdirectoryLi, .dragOverSubdirectoryLi {
+	padding: 2px 0 2px 40px;
+	background-image: url('folder_document.png');
+  	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 25px;
+}
+
+.selectedAnchor {
+	color: red;
+}
+
+.subdirectoryAnchor, .selectedAnchor {
+	text-decoration: none;
+}
+
+.subdirectoryAnchor:hover, .selectedAnchor:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.documentAccordion, .activeDocumentAccordion {
+	width: 100%;
+	border: none;
+	padding: 15px;
+	font-size: 15px;
+	background-color: #eee;
+	text-align: left; 
+}
+
+.documentAccordion:hover, .activeDocumentAccordion:hover, .createContentButton:hover {
+	background-color: #ccc; 
+	cursor: pointer;
+}
+
+.createContentButton {
+	background-color: #eee;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.documentAccordion:after, .activeDocumentAccordion:after {
+	float: right;
+	color: #777;
+	font-weight: bold;
+} 
+
+.documentAccordion:after {
+	content: '\002B';
+}
+
+.activeDocumentAccordion:after {
+	content: "\2212";	
+}
+
+.documentPanel, .hiddenElement {
+	display: none;
+}
+
+.visibleDocumentPanel {
+	font-size: 15px;
+	border-left: 1px solid grey;
+}
+
+.visibleDocumentPanel p {
+	margin-left: 10px;
+}
+
+.deleteAlertModal {
+	display: none;
+	position: fixed;
+  	z-index: 1;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	overflow: auto;
+  	background-color: rgba(0,0,0,0.4);
+}
+
+.modalWindow {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 60%;
+}
+
+.createDirectoryForm input[type="text"] {
+	border-radius: 5px;
+	border: 2px solid green;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: #f1f1f1;
+	padding: 5px 10px;
+	margin: 5px 2px;
+	width: 40%;
+}
+
+.createDirectoryForm input[type="button"] {
+	background-color: green;
+	color: white;
+	padding: 5px 10px;
+ 	margin: 5px 2px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#createDocumentForm {
+	margin: 10px 5% 10px 5%;
+	border: 3px solid green;
+	border-radius: 20px;
+	background-color: #eee;
+	padding: 10px;
+}
+
+.deleteButton {
+	color: white;
+	background-color: #f44336;
+}
+
+.cancelDeleteButton {
+	color: black;
+	background-color: #ccc;
+}
+
+.deleteButton, .cancelDeleteButton {
+	opacity: 0.9;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	padding: 7px 12px 7px 12px;
+	margin-right: 15px;
+	font-size: 15px;
+}
+
+.deleteButton:hover, .cancelDeleteButton:hover {
+	opacity: 1;
+}
+
+.closeModalButton {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModalButton:hover, .closeModalButton:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

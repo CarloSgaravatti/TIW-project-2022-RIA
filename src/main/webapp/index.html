@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" media="all" href="css/myStyle.css"/>
+		<script src="login.js" charset="utf-8" defer></script>
+		<script src="utils.js" charset="utf-8" defer></script>
+	</head>
+	<body>
+		<h1 align = "center">Welcome to the document management application</h1>
+		<div class = "indexForms">
+			
+			<div class = "loginContainer"  id = "loginSection">
+				<div class = "loginSection">
+					<div class = "sectionHeading">
+						<h2>Login</h2>
+					</div>
+					<div class = "alertMessage">
+						<p id = "loginErrorMessage"></p>
+					</div>
+					<form action = "#" method = "post" id = "login">
+						<label>Username</label>
+						<input type = "text" name = "username" id = "loginUser" required><br>
+						<label>Password</label>
+						<input type = "password" name = "password" id = "loginPsw" required><br>
+						<div class = "loginBottomSection">
+							<input id = "loginButton" type = "button" value = "Login">
+							<p class = "changeAutMethod">Don't have an account? <a id = "registerAnchor" href = "#">Register</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div class = "hiddenElement" id = "registrationSection">
+				<div class = "registrationSection">
+					<div class = "sectionHeading">
+						<h2>Registration</h2>
+					</div>
+					<div class = "alertMessage">
+						<p id = "registrationErrorMessage"></p>
+					</div>
+					<form action = "#" method = "post" id = "registration">
+						<label>Username</label>
+						<input type = "text" name = "username" required><br>
+						<label>Email</label>
+						<input type = "email" name = "email" id = "emailInput" required><br>
+						<label>Password</label>
+						<input type = "password" name = "password" id = "passwordInput" required><br>
+						<label>Repeat Password</label>
+						<input type = "password" name = "repeatedPassword" id = "repeatPasswordInput" required><br>
+						<div class = "registrationBottomSection">
+							<input id = "registrationButton" type = "button" value = "Registration">
+							<p class = "changeAutMethod">Already have an account? <a id = "loginAnchor" href = "#">Login</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

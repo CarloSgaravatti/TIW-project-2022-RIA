@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Gestione Cartelle</title>
+		<link rel="stylesheet" type="text/css" media="all" href="css/myStyle.css"/>
+		<script src="homeManagement.js" charset="utf-8" defer></script>
+		<script src="utils.js" charset="utf-8" defer></script>
+	</head>
+	<body>
+		<div class = "header">
+			<h1>Home Page</h1>
+		</div>
+		
+		<div class = "navbar">
+			<a href = "Logout">Logout</a>
+			<a href = "#" id = "back">Back</a>
+		
+			<!-- <div id = "languages">
+				<a href = "#" id = "changeLanguageIT">&#x1F1EE;&#x1F1F9;</a>
+				<a href = "#" id = "changeLanguageEN">&#x1F1EC;&#x1F1E7;</a>
+			</div>-->
+		</div>
+		
+		<div class = "alertMessage">
+			<p id = "message"></p>
+		</div>
+		
+		<div class = "personalMessage">
+			<p id = "personalMessage"></p>
+		</div>
+		
+		<div class = "content">
+			<div class = "directoryTree">
+				<button class = "createContentButton" id = "createDirectoryButton">Add Directory</button>
+				<ul class = "directoryUl" id = "directoryTree">
+					<li class = "directoryLi" id = "recycleBin">
+						Recycle Bin
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "documentsPart" id = "documentsView">
+				<div class = "subdirectoryContent" id = "documentsOfSubdirectory">
+					
+				</div>
+				
+				<form method = "post" action = "#" id = "createDocumentForm" class = "hiddenElement">
+					<label>Document Name</label>
+					<input type = "text" name = "name" required>
+					<label>Document Summary</label>
+					<textarea name = "summary" form = "createDocumentForm" rows = "3" cols = "30" required></textarea>
+					<label>Document Type</label>
+					<input type = "text" name = "type" required>
+					<input type = "hidden" name = "subdirectoryId" id = "subdirectoryIdForDocument">
+					<input type = "button" value = "Create Document" id = "createDocumentButton">
+					<input type = "button" value = "Cancel" id = "cancelDocumentCreation">
+				</form>
+			</div>
+		</div>
+		
+		<div class = "deleteAlertModal" id = "modalContainer">
+			<div class = "modalWindow" id = "modal">
+				<span class = "closeModalButton" id = "closeModalXButton">&times;</span>
+				<p id = "modalContent"></p>
+				<button id = "confirmDelete" class = "deleteButton">Delete</button>
+				<button id = "abortDelete" class = "cancelDeleteButton">Cancel</button>
+			</div>
+		</div>
+		
+	</body>
+</html>
